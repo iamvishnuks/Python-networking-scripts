@@ -15,4 +15,7 @@ import socket
 hostnames=open('host.txt').readlines()
 
 for host in hostnames:
-    print host.strip(),socket.gethostbyname(host.strip())
+    try:
+      print host.strip(),socket.gethostbyname(host.strip())
+    except:
+      print "Unsuccesfull"
